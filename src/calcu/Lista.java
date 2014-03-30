@@ -98,9 +98,9 @@ public class Lista<T> {
      * @param datoInicial El dato como referencia
      * @throws ListaException 
      */
-    public void insertaAntesDato(T dato, T datoInicial) throws ListaException {
+    public void insertaAntesDato(T dato, T datoInicial) throws ListExecption {
         if (inicio == null) {
-            throw new ListaException("La lista está vacía.");
+            throw new ListExecption("La lista está vacía.");
         }
         Nodo<T> actual = inicio;
         Nodo<T> anterior = null;
@@ -125,7 +125,7 @@ public class Lista<T> {
             }
 
         } else {
-            throw new ListaException("El nodo dado como referencia no está en la lista");
+            throw new ListExecption("El nodo dado como referencia no está en la lista");
         }
     }
 
@@ -135,9 +135,9 @@ public class Lista<T> {
      * @param datoInicial El dato como referencia
      * @throws ListaException 
      */
-    public void insertaDespuesDato(T dato, T datoInicial) throws ListaException {
+    public void insertaDespuesDato(T dato, T datoInicial) throws ListExecption {
         if (inicio == null) {
-            throw new ListaException("La lista está vacía.");
+            throw new ListExecption("La lista está vacía.");
         }
         Nodo<T> actual = inicio;
         boolean band = false;
@@ -154,7 +154,7 @@ public class Lista<T> {
             nodo.setLiga(actual.getLiga());
             actual.setLiga(nodo);
         } else {
-            throw new ListaException("El nodo dado como referencia no está en la lista");
+            throw new ListExecption("El nodo dado como referencia no está en la lista");
         }
     }
 
